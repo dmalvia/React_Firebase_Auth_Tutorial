@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #fafafa;
   display: flex;
@@ -23,4 +27,12 @@ body {
 .g-btn > div > svg {
   width: 40px !important;
   height: 38px !important;
+}
+.button-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#recaptcha-container {
+  margin: 20px;
 }
