@@ -24,3 +24,12 @@ body {
   width: 40px !important;
   height: 38px !important;
 }
+
+.button-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#recaptcha-container {
+  margin: 20px;
+}
