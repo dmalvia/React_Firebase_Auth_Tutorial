@@ -33,14 +33,14 @@ export function UserAuthContextProvider({ children }) {
   }
 
   function setUpRecaptcha(number) {
-    const recaptchaVerifier = new RecaptchaVerifier (
-      "recaptcha-container" , 
-      {}, 
-      auth
-    );
+   const recaptchaVerifier = new RecaptchaVerifier (
+    "recaptcha-container" , 
+    {}, 
+    auth
+   );
 recaptchaVerifier.render(); 
 return signInWithPhoneNumber(auth, number, recaptchaVerifier)
-  }
+}
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
@@ -55,7 +55,7 @@ return signInWithPhoneNumber(auth, number, recaptchaVerifier)
 
   return (
     <userAuthContext.Provider
-      value={{ user, logIn, signUp, logOut, googleSignIn, setUpRecaptcha }}
+       value={{ user, logIn, signUp, logOut, googleSignIn, setUpRecaptcha}}
     >
       {children}
     </userAuthContext.Provider>

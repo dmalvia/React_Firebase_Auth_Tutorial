@@ -23,6 +23,7 @@ const getOtp = async (e) => {
     if(number === "" || number === undefined) 
     return setError("Please enter a valid phone number!")
     try{
+      
       const response = await setUpRecaptcha(number);
       console.log(response);
       setConfirmObj(response);
@@ -32,7 +33,7 @@ const getOtp = async (e) => {
       setError(err.message);
     }
     console.log(number);
-}
+};
 
 const verifyOtp = async (e) => {
   e.preventDefault();

@@ -4,9 +4,10 @@ import "./App.css";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import PhoneSignup from "./components/PhoneSignup";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
-import PhoneSignup from "./components/PhoneSignup";
+
 
 function App() {
   return (
@@ -24,8 +25,10 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              
               <Route path="/" element={<Login />} />
-            <Route path="/PhoneSignup" element={<PhoneSignup />} />
+              <Route path="/PhoneSignup" element={<PhoneSignup />} />
+            
               <Route path="/Signup" element={<Signup />} />
             </Routes>
           </UserAuthContextProvider>
