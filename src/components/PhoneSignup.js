@@ -63,7 +63,8 @@ const verifyOtp = async (e) => {
             placeholder="Enter Phone Number"
             />
 <div id="recaptcha-container" />
-            
+
+           
           </Form.Group>
           <div className="button-right">
               <Link to ="/">
