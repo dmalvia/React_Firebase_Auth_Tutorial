@@ -4,11 +4,15 @@ import "./App.css";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import PhoneSignup from "./components/PhoneSignup";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
+import Calender from "./components/Calender";
+
 
 function App() {
   return (
+    
     <Container style={{ width: "400px" }}>
       <Row>
         <Col>
@@ -22,13 +26,18 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              
               <Route path="/" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
+              <Route path="/PhoneSignup" element={<PhoneSignup />} />
+            
+              <Route path="/Signup" element={<Signup />} />
+              <Route path="/Calender" element={<Calender />} />
             </Routes>
           </UserAuthContextProvider>
         </Col>
       </Row>
     </Container>
+    
   );
 }
 

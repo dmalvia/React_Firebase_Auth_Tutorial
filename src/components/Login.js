@@ -5,12 +5,15 @@ import { Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../context/UserAuthContext";
 
+
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { logIn, googleSignIn } = useUserAuth();
+  const { logIn, googleSignIn} = useUserAuth();
   const navigate = useNavigate();
+   
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,6 +36,12 @@ const Login = () => {
     }
   };
 
+
+
+  
+
+
+
   return (
     <>
       <div className="p-4 box">
@@ -54,12 +63,16 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-
+          
           <div className="d-grid gap-2">
+          
             <Button variant="primary" type="Submit">
-              Log In
+              <Link to={"/Calender"}>Log In</Link>
+              
             </Button>
+           
           </div>
+          
         </Form>
         <hr />
         <div>
@@ -69,9 +82,17 @@ const Login = () => {
             onClick={handleGoogleSignIn}
           />
         </div>
+        <Link to ="/PhoneSignup">
+        <div className="d-grid gap-2 mt-3">
+        
+            <Button variant="success" type="Submit" >
+           Sign in with phone
+              </Button>
+          </div>
+          </Link>
       </div>
       <div className="p-4 box mt-3 text-center">
-        Don't have an account? <Link to="/signup">Sign up</Link>
+        Don't have an account? <Link to="/Signup">Sign up</Link>
       </div>
     </>
   );

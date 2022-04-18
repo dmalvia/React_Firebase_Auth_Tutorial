@@ -24,3 +24,47 @@ body {
   width: 40px !important;
   height: 38px !important;
 }
+
+.button-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#recaptcha-container {
+  margin: 20px;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  width:100%;
+  margin-left: 5%;
+}
+
+label {
+  
+  margin-left:50%;
+  margin-top:100px;
+  color: black;
+  font-weight:bold;
+  display: block;
+}
+
+label:after { content: ":"}
+
+ .button1{
+  margin-left: 49%;
+  background-color: #044656;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
