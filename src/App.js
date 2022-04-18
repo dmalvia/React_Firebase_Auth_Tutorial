@@ -7,6 +7,7 @@ import Signup from "./components/Signup";
 import PhoneSignup from "./components/PhoneSignup";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
+import Calender from "./components/Calender";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
               <Route path="/PhoneSignup" element={<PhoneSignup />} />
             
               <Route path="/Signup" element={<Signup />} />
+              <Route path="/Calender" element={<Calender />} />
             </Routes>
           </UserAuthContextProvider>
         </Col>

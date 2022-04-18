@@ -36,6 +36,8 @@ const Login = () => {
     }
   };
 
+
+
   
 
 
@@ -61,12 +63,16 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-
+          
           <div className="d-grid gap-2">
+          
             <Button variant="primary" type="Submit">
-              Log In
+              <Link to={"/Calender"}>Log In</Link>
+              
             </Button>
+           
           </div>
+          
         </Form>
         <hr />
         <div>
@@ -78,10 +84,10 @@ const Login = () => {
         </div>
         <Link to ="/PhoneSignup">
         <div className="d-grid gap-2 mt-3">
+        
             <Button variant="success" type="Submit" >
-              Sign in with phone
-
-            </Button>
+           Sign in with phone
+              </Button>
           </div>
           </Link>
       </div>

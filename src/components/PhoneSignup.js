@@ -21,7 +21,7 @@ const getOtp = async (e) => {
     e.preventDefault();
     setError("");
     if(number === "" || number === undefined) 
-    return setError("Please enter a valid phone number!")
+    return setError("Please enter a valid phone number!");
     try{
       
       const response = await setUpRecaptcha(number);
@@ -63,8 +63,7 @@ const verifyOtp = async (e) => {
             placeholder="Enter Phone Number"
             />
 <div id="recaptcha-container" />
-
-           
+        
           </Form.Group>
           <div className="button-right">
               <Link to ="/">
@@ -73,15 +72,30 @@ const verifyOtp = async (e) => {
               <Button varient= "primary" type="submit"> Send OTP </Button>
           </div>
           </Form>
-
           <Form onSubmit={verifyOtp} style= {{display: flag ? "block" : "none" }}>
           <Form.Group className="mb-3" controlId="formBasicotp">
-            <Form.Control>
-              type="text",
-              placeholder="Enter otp",
-              onChange = {(e) => setOtp(e.target.value)}
-            </Form.Control>
-           </Form.Group>
+           {/*<Form.Control>
+             type="text",
+             placeholder="Enter otp",
+             onChange = {(e) => setOtp(e.target.value)}
+  </Form.Control>*/}
+<PhoneInput 
+            value={otp}
+            onChange={setOtp}
+            placeholder="Enter Otp"
+            />
+
+  <Form
+             type="number"
+             placeholder="Enter otp"
+             onChange = {(e) => setOtp(e.target.value)} />
+
+
+
+
+
+
+          </Form.Group>
           <div className="button-right">
               <Link to ="/">
               <Button varient= "secondary"> Cancel </Button> &nbsp;
